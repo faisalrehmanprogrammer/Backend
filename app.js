@@ -9,8 +9,7 @@ const app=express();
 app.use(express.json())
 
 databaseConnect()
-app.use(cors())
-
+app.use(cors("http://localhost:5173"))
 app.use(router)
 
 app.listen(PORT,()=>{
